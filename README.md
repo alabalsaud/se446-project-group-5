@@ -71,9 +71,13 @@ Input: /data/chicago_crimes.csv
 Output: /user/alabalsaud/project/m1/task2
 ---
 packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] ...
-INFO mapreduce.Job: Running job: job_xxx
-INFO mapreduce.Job:  map 100% reduce 100%
-INFO mapreduce.Job: Job job_xxx completed successfully
+2026-02-27 12:19:55,627 INFO mapreduce.Job: Running job: job_1771403826595_0056
+2026-02-27 12:20:15,562 INFO mapreduce.Job: Job job_1771402826595_0057 running in uber mode : false
+2026-02-27 12:20:15,565 INFO mapreduce.Job:  map 0% reduce 0%
+2026-02-27 12:20:45,487 INFO mapreduce.Job:  map 52% reduce 0%
+2026-02-27 12:20:50,479 INFO mapreduce.Job:  map 100% reduce 0%
+2026-02-27 12:21:07,796 INFO mapreduce.Job:  map 100% reduce 100%
+2026-02-27 12:21:10,750 INFO mapreduce.Job: Job job_1771403826595_0056 completed successfully
 ```
 
 
@@ -127,9 +131,27 @@ Running MapReduce - Task: task3
 Input: /data/chicago_crimes.csv
 Output: /user/alabalsaud/project/m1/task3
 ---
-INFO mapreduce.Job: Running job: job_xxx
-INFO mapreduce.Job:  map 100% reduce 100%
-INFO mapreduce.Job: Job job_xxx completed successfully
+packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] /tmp/streamjob8329238832929712322.jar tmpDir=null
+2026-02-27 12:19:51,124 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:19:51,399 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:19:51,819 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/alabalsaud/.staging/job_1771402826595_0057
+2026-02-27 12:19:53,609 INFO mapred.FileInputFormat: Total input files to process : 1
+2026-02-27 12:19:53,633 INFO net.NetworkTopology: Adding a new node: /default-rack/164.92.103.148:9866
+2026-02-27 12:19:53,634 INFO net.NetworkTopology: Adding a new node: /default-rack/146.190.147.119:9866
+2026-02-27 12:19:54,278 INFO mapreduce.JobSubmitter: number of splits:2
+2026-02-27 12:19:55,150 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1771402826595_0057
+2026-02-27 12:19:55,150 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-02-27 12:19:55,464 INFO conf.Configuration: resource-types.xml not found
+2026-02-27 12:19:55,465 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-02-27 12:19:55,576 INFO impl.YarnClientImpl: Submitted application application_1771402826595_0057
+2026-02-27 12:19:55,624 INFO mapreduce.Job: The url to track the job: http://master-node:8088/proxy/application_1771402826595_0057/
+2026-02-27 12:19:55,627 INFO mapreduce.Job: Running job: job_1771402826595_0057
+2026-02-27 12:20:15,562 INFO mapreduce.Job: Job job_1771402826595_0057 running in uber mode : false
+2026-02-27 12:20:15,565 INFO mapreduce.Job:  map 0% reduce 0%
+2026-02-27 12:20:45,487 INFO mapreduce.Job:  map 52% reduce 0%
+2026-02-27 12:20:50,479 INFO mapreduce.Job:  map 100% reduce 0%
+2026-02-27 12:21:07,796 INFO mapreduce.Job:  map 100% reduce 100%
+2026-02-27 12:21:10,750 INFO mapreduce.Job: Job job_1771402826595_0057 completed successfully
 ```
 
 
@@ -181,9 +203,27 @@ Running MapReduce - Task: task4
 Input: /data/chicago_crimes.csv
 Output: /user/alabalsaud/project/m1/task4
 ---
-INFO mapreduce.Job: Running job: job_xxx
-INFO mapreduce.Job:  map 100% reduce 100%
-INFO mapreduce.Job: Job job_xxx completed successfully
+packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] /tmp/streamjob391738917758181154.jar tmpDir=null
+2026-02-27 12:22:14,365 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:22:14,736 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:22:15,265 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/alabalsaud/.staging/job_1771402826595_0058
+2026-02-27 12:22:17,005 INFO mapred.FileInputFormat: Total input files to process : 1
+2026-02-27 12:22:17,046 INFO net.NetworkTopology: Adding a new node: /default-rack/164.92.103.148:9866
+2026-02-27 12:22:17,050 INFO net.NetworkTopology: Adding a new node: /default-rack/146.190.147.119:9866
+2026-02-27 12:22:17,679 INFO mapreduce.JobSubmitter: number of splits:2
+2026-02-27 12:22:18,546 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1771402826595_0058
+2026-02-27 12:22:18,546 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-02-27 12:22:18,871 INFO conf.Configuration: resource-types.xml not found
+2026-02-27 12:22:18,871 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-02-27 12:22:18,997 INFO impl.YarnClientImpl: Submitted application application_1771402826595_0058
+2026-02-27 12:22:19,051 INFO mapreduce.Job: The url to track the job: http://master-node:8088/proxy/application_1771402826595_0058/
+2026-02-27 12:22:19,053 INFO mapreduce.Job: Running job: job_1771402826595_0058
+2026-02-27 12:22:34,909 INFO mapreduce.Job: Job job_1771402826595_0058 running in uber mode : false
+2026-02-27 12:22:34,911 INFO mapreduce.Job:  map 0% reduce 0%
+2026-02-27 12:23:02,808 INFO mapreduce.Job:  map 47% reduce 0%
+2026-02-27 12:23:08,895 INFO mapreduce.Job:  map 100% reduce 0%
+2026-02-27 12:23:22,249 INFO mapreduce.Job:  map 100% reduce 100%
+2026-02-27 12:23:25,088 INFO mapreduce.Job: Job job_1771402826595_0058 completed successfully
 ```
 
 
@@ -232,9 +272,34 @@ Running MapReduce - Task: task5
 Input: /data/chicago_crimes.csv
 Output: /user/alabalsaud/project/m1/task5
 ---
-INFO mapreduce.Job: Running job: job_xxx
-INFO mapreduce.Job:  map 100% reduce 100%
-INFO mapreduce.Job: Job job_xxx completed successfully
+alabalsaud@master-node:~/se446-project-group-X$ ./scripts/run_hadoop.sh task5 alabalsaud
+Removing existing output (if any)...
+Running MapReduce - Task: task5
+Input: /data/chicago_crimes.csv
+Output: /user/alabalsaud/project/m1/task5
+---
+packageJobJar: [] [/opt/hadoop-3.4.1/share/hadoop/tools/lib/hadoop-streaming-3.4.1.jar] /tmp/streamjob1235064395770733514.jar tmpDir=null
+2026-02-27 12:24:51,728 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:24:52,158 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master-node/134.209.172.50:8032
+2026-02-27 12:24:52,810 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/alabalsaud/.staging/job_1771402826595_0059
+2026-02-27 12:24:54,706 INFO mapred.FileInputFormat: Total input files to process : 1
+2026-02-27 12:24:54,738 INFO net.NetworkTopology: Adding a new node: /default-rack/146.190.147.119:9866
+2026-02-27 12:24:54,748 INFO net.NetworkTopology: Adding a new node: /default-rack/164.92.103.148:9866
+2026-02-27 12:24:55,394 INFO mapreduce.JobSubmitter: number of splits:2
+2026-02-27 12:24:56,243 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1771402826595_0059
+2026-02-27 12:24:56,244 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-02-27 12:24:56,596 INFO conf.Configuration: resource-types.xml not found
+2026-02-27 12:24:56,597 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-02-27 12:24:56,729 INFO impl.YarnClientImpl: Submitted application application_1771402826595_0059
+2026-02-27 12:24:56,800 INFO mapreduce.Job: The url to track the job: http://master-node:8088/proxy/application_1771402826595_0059/
+2026-02-27 12:24:56,803 INFO mapreduce.Job: Running job: job_1771402826595_0059
+2026-02-27 12:25:13,494 INFO mapreduce.Job: Job job_1771402826595_0059 running in uber mode : false
+2026-02-27 12:25:13,496 INFO mapreduce.Job:  map 0% reduce 0%
+2026-02-27 12:25:42,067 INFO mapreduce.Job:  map 26% reduce 0%
+2026-02-27 12:25:43,278 INFO mapreduce.Job:  map 53% reduce 0%
+2026-02-27 12:25:46,930 INFO mapreduce.Job:  map 100% reduce 0%
+2026-02-27 12:25:59,028 INFO mapreduce.Job:  map 100% reduce 100%
+2026-02-27 12:26:01,896 INFO mapreduce.Job: Job job_1771402826595_0059 completed successfully
 ```
 
 
