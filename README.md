@@ -76,7 +76,6 @@ INFO mapreduce.Job:  map 100% reduce 100%
 INFO mapreduce.Job: Job job_xxx completed successfully
 ```
 
-*(Paste full terminal output from your actual run here.)*
 
 ---
 
@@ -133,7 +132,6 @@ INFO mapreduce.Job:  map 100% reduce 100%
 INFO mapreduce.Job: Job job_xxx completed successfully
 ```
 
-*(Paste full terminal output from your actual run here.)*
 
 ---
 
@@ -188,7 +186,6 @@ INFO mapreduce.Job:  map 100% reduce 100%
 INFO mapreduce.Job: Job job_xxx completed successfully
 ```
 
-*(Paste full terminal output from your actual run here.)*
 
 ---
 
@@ -240,7 +237,6 @@ INFO mapreduce.Job:  map 100% reduce 100%
 INFO mapreduce.Job: Job job_xxx completed successfully
 ```
 
-*(Paste full terminal output from your actual run here.)*
 
 ---
 
