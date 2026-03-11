@@ -1,6 +1,6 @@
 # SE446 Project - Chicago Crime Analytics with MapReduce
 
-**Group Name:** Group   
+**Group Name:** Group 5   
 **Course:** SE446  
 **Milestone:** 1
 
