@@ -9,7 +9,7 @@
 # Author: Group 5 (add IDs before submission)
 # ============================================
 """
-Why no auto-SSH from Cursor: cluster login must be done on YOUR terminal (password/key).
+Run on the cluster after SSH from your terminal (password/key).
 After SSH:
 
   cd ~/se446-project-group-5/milestone2
