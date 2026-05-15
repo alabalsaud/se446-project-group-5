@@ -1,45 +1,0 @@
-WARNING: Using incubator modules: jdk.incubator.vector
-Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
-Setting default log level to "WARN".
-To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-26/05/15 21:11:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-[Stage 0:>                                                          (0 + 8) / 8]                                                                                26/05/15 21:11:54 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
-26/05/15 21:11:55 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
-=== SE446 M2 ML (spark-submit) ===
-Master: local[*]
-App name: SE446_M2_G5_ML
-Synthetic rows: 10000
-Sample fraction: 1.0 (seed=42)
-Row count after filter/sample: 10000
-
-========================================================================
-Model: LogisticRegression
-Training time (s): 2.163
-Metrics: {'AUC-ROC': 0.5798124320743735, 'Accuracy': 0.7501296008294454, 'F1': 0.6430317135072319, 'Precision': 0.562694418040543, 'Recall': 0.7501296008294454}
-Confusion matrix: {'TN': 1447, 'FP': 0, 'FN': 482, 'TP': 0}
-
-========================================================================
-Model: RandomForest
-Training time (s): 1.805
-Metrics: {'AUC-ROC': 0.6565257350305538, 'Accuracy': 0.7646448937273198, 'F1': 0.7128975038883948, 'Precision': 0.7330510844902045, 'Recall': 0.7646448937273199}
-Confusion matrix: {'TN': 1390, 'FP': 57, 'FN': 397, 'TP': 85}
-
-=== Task 7: Random Forest feature importances ===
-crime_index       0.846835
-Hour              0.057205
-District          0.053924
-domestic_index    0.042036
-
-========================================================================
-Model: GBT
-Training time (s): 8.459
-Metrics: {'AUC-ROC': 0.6347228634433238, 'Accuracy': 0.7532400207361327, 'F1': 0.6989850481296828, 'Precision': 0.7090774530479762, 'Recall': 0.7532400207361327}
-Confusion matrix: {'TN': 1379, 'FP': 68, 'FN': 408, 'TP': 74}
-
-=== Side-by-side (Task 6) ===
-Model                  AUC-ROC       Acc        F1      Prec       Rec      TN      FP      FN      TP    TrainS
-LogisticRegression      0.5798    0.7501    0.6430    0.5627    0.7501    1447       0     482       0     2.163
-RandomForest            0.6565    0.7646    0.7129    0.7331    0.7646    1390      57     397      85     1.805
-GBT                     0.6347    0.7532    0.6990    0.7091    0.7532    1379      68     408      74     8.459
-
-Done.

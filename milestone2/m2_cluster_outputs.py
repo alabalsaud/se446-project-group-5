@@ -12,7 +12,7 @@
 Run on the cluster after SSH from your terminal (password/key).
 After SSH:
 
-  cd ~/se446-project-group-5/milestone2
+  cd ~/se446-project-group-5/milestone2   # run from milestone2 folder
   export PYTHONPATH="$(pwd)"
 
   spark-submit --master yarn --deploy-mode client \\

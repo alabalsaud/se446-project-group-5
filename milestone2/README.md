@@ -25,23 +25,24 @@ We **reproduced** Milestone 1 analytics with **Spark** (DataFrames + SQL) on the
 ## 3. Repository layout
 
 ```
-milestone2/
-├── README.md                      ← this report
-├── M2_Spark_ML_Group5.ipynb       ← Tasks 1–7 (notebook)
-├── m2_spark_ml.py                  ← Tasks 5–7 + Task 11 spark-submit
-├── m2_cluster_outputs.py           ← export all task CSVs on cluster
-├── scripts/
-│   └── run_m2_cluster.sh           ← yarn client + spark-submit helper
-├── src/                            ← per-member task scripts
+milestone2/                          ← all M2 code and outputs live here
+├── README.md
+├── M2_Spark_ML_Group5.ipynb
+├── m2_spark_ml.py
+├── m2_cluster_outputs.py
+├── scripts/run_m2_cluster.sh
+├── src/
 │   ├── mkalissa_task02_location_hotspots.py
 │   ├── lalmousa_task03_yearly_trend.py
 │   ├── lalbabtain_task04_arrest_analysis.py
 │   └── lalbabtain_task07_rf_importance.py
 └── output/
-    ├── m2_real/                    ← cluster results (full HDFS run)
-    ├── spark_submit/               ← Task 11 logs
-    └── local_ml_run.log            ← Task 9 local[*] evidence
+    ├── m2_real/
+    ├── spark_submit/
+    └── local_ml_run.log
 ```
+
+Always `cd milestone2` before running scripts or the notebook.
 
 ---
 

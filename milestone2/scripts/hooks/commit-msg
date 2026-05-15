@@ -1,0 +1,6 @@
+#!/bin/sh
+# Block commit messages that mention Cursor or its co-author trailer.
+if grep -qiE 'cursor|cursoragent@cursor\.com' "$1"; then
+  echo "ERROR: Do not use 'cursor' in commit messages." >&2
+  exit 1
+fi
