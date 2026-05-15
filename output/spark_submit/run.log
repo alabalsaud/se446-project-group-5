@@ -1,0 +1,71 @@
+# Task 11 — spark-submit (YARN cluster deploy mode)
+# Application ID: application_1778738889964_0005
+# User: alabalsaud@134.209.172.50
+# Date: 2026-05-15
+
+## Command (run on cluster)
+
+```bash
+source /etc/profile.d/hadoop.sh
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+PY4J=/opt/spark/python/lib/py4j-0.10.9.7-src.zip
+export PYTHONPATH=$SPARK_HOME/python:$PY4J:$HOME/se446-project-group-5
+cd ~/se446-project-group-5
+
+spark-submit \
+  --master yarn \
+  --deploy-mode cluster \
+  --driver-memory 512m \
+  --num-executors 1 \
+  --executor-memory 1g \
+  --executor-cores 1 \
+  --conf spark.driver.maxResultSize=128m \
+  --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=python3 \
+  --conf spark.executorEnv.PYSPARK_PYTHON=python3 \
+  m2_spark_ml.py --hdfs-path hdfs:///data/chicago_crimes.csv --sample-fraction 0.05
+```
+
+## Terminal transcript (submit client output)
+
+See `output/spark_submit/submit_transcript.txt` — key lines:
+
+- Submitted application **application_1778738889964_0005**
+- Final status: **SUCCEEDED** (State: FINISHED)
+
+## YARN driver logs excerpt (`yarn logs -applicationId application_1778738889964_0005`)
+
+```
+=== SE446 M2 ML (spark-submit) ===
+Master: yarn
+App name: SE446_M2_G5_ML
+Row count after filter/sample: 39534
+
+Model: LogisticRegression
+Training time (s): 25.096
+Metrics: {'AUC-ROC': 0.6131, 'Accuracy': 0.7215, 'F1': 0.6250, ...}
+
+Model: RandomForest
+Training time (s): 23.679
+Metrics: {'AUC-ROC': 0.8050, 'Accuracy': 0.8089, 'F1': 0.7718, ...}
+
+=== Task 7: Random Forest feature importances ===
+crime_index       0.972768
+District          0.004427
+Hour              0.011677
+domestic_index    0.011128
+
+Model: GBT
+Training time (s): 88.501
+Metrics: {'AUC-ROC': 0.8240, 'Accuracy': 0.8454, 'F1': 0.8289, ...}
+
+=== Side-by-side (Task 6) ===
+Model                  AUC-ROC       Acc        F1      Prec       Rec      TN      FP      FN      TP    TrainS
+LogisticRegression      0.6131    0.7215    0.6250    0.6957    0.7215    5517      69    2105     115    25.096
+RandomForest            0.8050    0.8089    0.7718    0.8488    0.8089    5585       1    1491     729    23.679
+GBT                     0.8240    0.8454    0.8289    0.8569    0.8454    5490      96    1111    1109    88.501
+
+Done.
+```
+
+**Best model on cluster sample:** GBT (highest AUC-ROC 0.824, F1 0.829).
