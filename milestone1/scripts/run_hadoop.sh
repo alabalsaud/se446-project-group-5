@@ -10,7 +10,7 @@ OUTPUT="/user/$USER_ID/project/m1/$TASK"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
-cd "$PROJECT_DIR"
+cd "$PROJECT_DIR"   # milestone1 root
 
 case $TASK in
     task2) MAPPER="src/mapper_task2.py" ;;

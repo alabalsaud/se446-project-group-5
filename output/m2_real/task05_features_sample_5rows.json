@@ -1,0 +1,67 @@
+[
+  {
+    "Primary Type": "ARSON",
+    "District": 14,
+    "Hour": 0,
+    "Domestic_str": "false",
+    "feature_positions_note": "[0]=District [1]=crime_index [2]=Hour [3]=domestic_index",
+    "features_vector": [
+      14.0,
+      19.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "Primary Type": "ARSON",
+    "District": 17,
+    "Hour": 2,
+    "Domestic_str": "false",
+    "feature_positions_note": "[0]=District [1]=crime_index [2]=Hour [3]=domestic_index",
+    "features_vector": [
+      17.0,
+      19.0,
+      2.0,
+      0.0
+    ]
+  },
+  {
+    "Primary Type": "ARSON",
+    "District": 15,
+    "Hour": 22,
+    "Domestic_str": "false",
+    "feature_positions_note": "[0]=District [1]=crime_index [2]=Hour [3]=domestic_index",
+    "features_vector": [
+      15.0,
+      19.0,
+      22.0,
+      0.0
+    ]
+  },
+  {
+    "Primary Type": "ARSON",
+    "District": 8,
+    "Hour": 5,
+    "Domestic_str": "false",
+    "feature_positions_note": "[0]=District [1]=crime_index [2]=Hour [3]=domestic_index",
+    "features_vector": [
+      8.0,
+      19.0,
+      5.0,
+      0.0
+    ]
+  },
+  {
+    "Primary Type": "ARSON",
+    "District": 6,
+    "Hour": 5,
+    "Domestic_str": "false",
+    "feature_positions_note": "[0]=District [1]=crime_index [2]=Hour [3]=domestic_index",
+    "features_vector": [
+      6.0,
+      19.0,
+      5.0,
+      0.0
+    ]
+  }
+]

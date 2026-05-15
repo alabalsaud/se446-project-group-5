@@ -1,0 +1,9 @@
+{
+  "utc_timestamp": "2026-05-15T15:50:23.374214+00:00",
+  "spark_master": "yarn",
+  "app_name": "SE446_M2_G5_ML",
+  "input_path": "hdfs:///data/chicago_crimes.csv",
+  "output_dir": "/home/alabalsaud/se446-project-group-5/output/m2_real",
+  "cleaned_row_count": 793073,
+  "seconds_load_and_prepare": 47.326
+}

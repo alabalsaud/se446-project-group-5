@@ -1,0 +1,45 @@
+spawn ssh -o StrictHostKeyChecking=no -o ConnectTimeout=25 alabalsaud@134.209.172.50 source /etc/profile.d/hadoop.sh; yarn logs -applicationId application_1778738889964_0005 2>/dev/null | grep -E "SE446|Master:|Row count|Model:|AUC-ROC|Side-by-side|crime_index|Training time|Done\.|===|LogisticRegression|RandomForest|GBT" | head -80
+alabalsaud@134.209.172.50's password: 
+========================================================================
+========================================================================
+========================================================================
+========================================================================
+========================================================================
+26/05/15 16:03:37 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1778738889964_0005_000001
+26/05/15 16:03:39 INFO ApplicationMaster: Starting the user application in a separate Thread
+26/05/15 16:03:39 INFO ApplicationMaster: Waiting for spark context initialization...
+26/05/15 16:03:40 INFO ResourceUtils: ==============================================================
+26/05/15 16:03:40 INFO ResourceUtils: ==============================================================
+26/05/15 16:03:40 INFO SparkContext: Submitted application: SE446_M2_G5_ML
+26/05/15 16:03:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, worker-node-1, 42527, None)
+26/05/15 16:03:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, worker-node-1, 42527, None)
+26/05/15 16:03:45 INFO ApplicationMaster: Preparing Local resources
+26/05/15 16:03:46 INFO ApplicationMaster: 
+===============================================================================
+===============================================================================
+26/05/15 16:03:46 INFO ApplicationMaster: Started progress reporter thread with (heartbeat : 3000, initial allocation : 200) intervals
+========================================================================
+=== SE446 M2 ML (spark-submit) ===
+Master: yarn
+App name: SE446_M2_G5_ML
+Row count after filter/sample: 39534
+========================================================================
+Model: LogisticRegression
+Training time (s): 25.096
+Metrics: {'AUC-ROC': 0.6130895127135726, 'Accuracy': 0.7214962849090443, 'F1': 0.6250263861534668, 'Precision': 0.6957200534639099, 'Recall': 0.7214962849090444}
+========================================================================
+Model: RandomForest
+Training time (s): 23.679
+Metrics: {'AUC-ROC': 0.8049507213980901, 'Accuracy': 0.8088649756597489, 'F1': 0.7718411836512992, 'Precision': 0.8488240048254587, 'Recall': 0.8088649756597489}
+=== Task 7: Random Forest feature importances ===
+crime_index       0.972768
+========================================================================
+Model: GBT
+Training time (s): 88.501
+Metrics: {'AUC-ROC': 0.8239623350525613, 'Accuracy': 0.8453753522931079, 'F1': 0.8289028099866784, 'Precision': 0.8569010221738951, 'Recall': 0.8453753522931078}
+=== Side-by-side (Task 6) ===
+Model                  AUC-ROC       Acc        F1      Prec       Rec      TN      FP      FN      TP    TrainS
+LogisticRegression      0.6131    0.7215    0.6250    0.6957    0.7215    5517      69    2105     115    25.096
+RandomForest            0.8050    0.8089    0.7718    0.8488    0.8089    5585       1    1491     729    23.679
+GBT                     0.8240    0.8454    0.8289    0.8569    0.8454    5490      96    1111    1109    88.501
+Done.
